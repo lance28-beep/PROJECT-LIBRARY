@@ -1,70 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@200;400;700;800&display=swap");
-* {
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-/*========== Colors ==========*/
-/*========== Font and typography ==========*/
-/*========== Font weight ==========*/
-/*========== Margenes Bottom ==========*/
-body {
-  font-family: "Noto Serif Display", serif;
-  font-size: 0.938rem;
-  font-weight: 500;
-  color: #283618;
-  background-color: #fefae0;
-}
-
-body header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body {
-  display: -ms-grid;
-  display: grid;
-  height: 100vh;
-  overflow: hidden;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 150px 1fr 20px;
-      grid-template-rows: 150px 1fr 20px;
-      grid-template-areas: 'header' 'section' 'footer';
-}
-
-header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: header;
-}
-
-section {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: section;
-  position: static;
-}
-
-footer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: footer;
-}
-
-section {
-  position: static;
-  height: 100vh;
-  width: 100vw;
 }
 
 .swiper {
@@ -76,101 +22,12 @@ section {
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 0px;
-  height: 500px;
-  border: 1px solid black;
+  width: 300px;
+  height: 300px;
 }
 
 .swiper-slide img {
   display: block;
   width: 100%;
-}
-
-.book {
-  height: 290px;
-  width: 200px;
-  background-color: #606c38;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.book .switch {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-.book .switch p {
-  position: relative;
-  left: -80px;
-  width: 100px;
-  height: 15px;
-  font-size: 0.5rem;
-  font-weight: 500;
-  color: #fefae0;
-  text-align: center;
-  margin-top: 3px;
-}
-
-.book .switch .switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 25px;
-  margin: 10px;
-}
-
-.book .bookInfo h2 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #fefae0;
-}
-
-.book .bookInfo p {
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: #fefae0;
-}
-
-.book .book-button {
-  justify-self: flex-end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  color: #fefae0;
-}
-
-.book .book-button button {
-  margin: 0.5rem;
-  background: #283618;
-  width: 80px;
-  height: 20px;
-  color: #fefae0;
-  font-size: 12px;
-  font-weight: 100;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.book .book-button button:hover {
-  background: #dda15e;
-  color: #283618;
 }
 /*# sourceMappingURL=style.css.map */
