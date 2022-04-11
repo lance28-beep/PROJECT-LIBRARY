@@ -1,0 +1,21 @@
+body {
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px 1fr 20px;
+  grid-template-areas:
+    'header'
+    'section'
+    'footer';
+}
+header {
+  grid-area: header;
+}
+section {
+  grid-area: section;
+  position:static;
+}
+footer {
+  grid-area: footer;
+}

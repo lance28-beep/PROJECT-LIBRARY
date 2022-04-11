@@ -1,0 +1,67 @@
+.book {
+  height: 290px;
+  width: 200px;
+  background-color: $tertiary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  .switch {
+    align-self: flex-end;
+    p {
+      position: relative;
+      left: -80px;
+      width: 100px;
+      height: 15px;
+      font-size: 0.5rem;
+      font-weight: $font-medium;
+      color: $primary-color;
+      text-align: center;
+      margin-top: 3px;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 25px;
+      margin: 10px;
+    }
+  }
+  .bookInfo {
+    h2 {
+      font-size: 1.5rem;
+      font-weight: $font-medium;
+      color: $primary-color;
+    }
+    p {
+      font-size: 0.75rem;
+      font-weight: $font-medium;
+      color: $primary-color;
+    }
+  }
+
+  .book-button {
+    justify-self: flex-end;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: $primary-color;
+    button {
+      margin: 0.5rem;
+      background: $secondary-color;
+      width: 80px;
+      height: 20px;
+      color: $primary-color;
+      font-size: 12px;
+      font-weight: 100;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background: $quinary-color;
+        color: $secondary-color;
+      }
+    }
+  }
+}

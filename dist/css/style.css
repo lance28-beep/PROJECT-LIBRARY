@@ -1,9 +1,4 @@
-/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@200;400;700;800&display=swap");
-/*========== Colors ==========*/
-/*========== Font and typography ==========*/
-/*========== Font weight ==========*/
-/*========== Margenes Bottom ==========*/
 * {
   margin: 0;
   padding: 0;
@@ -11,92 +6,87 @@
           box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+/*========== Colors ==========*/
+/*========== Font and typography ==========*/
+/*========== Font weight ==========*/
+/*========== Margenes Bottom ==========*/
 body {
   font-family: "Noto Serif Display", serif;
   font-size: 0.938rem;
-  background: #fefae0;
+  font-weight: 500;
   color: #283618;
+  background-color: #fefae0;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  color: #606c38;
-  font-weight: 600;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-header {
+body header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header h1 {
-  margin-top: 0.75rem;
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-header button {
-  background: #283618;
-  width: 100px;
-  height: 30px;
-  color: #fefae0;
-  font-size: 1rem;
-  font-weight: 100;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-header button:hover {
-  background: #dda15e;
-  color: #283618;
-}
-
-section {
-  margin-top: 1.5rem;
-}
-
-section .bookList {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 90%;
-  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-section .bookList .book {
+body {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 150px 1fr 20px;
+      grid-template-rows: 150px 1fr 20px;
+      grid-template-areas: 'header' 'section' 'footer';
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+section {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: section;
+  position: static;
+}
+
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+
+section {
+  position: static;
+  height: 100vh;
+  width: 100vw;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 0px;
+  height: 500px;
+  border: 1px solid black;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.book {
   height: 290px;
   width: 200px;
   background-color: #606c38;
@@ -115,12 +105,12 @@ section .bookList .book {
           justify-content: space-between;
 }
 
-section .bookList .book .switch {
+.book .switch {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
-section .bookList .book .switch p {
+.book .switch p {
   position: relative;
   left: -80px;
   width: 100px;
@@ -132,7 +122,7 @@ section .bookList .book .switch p {
   margin-top: 3px;
 }
 
-section .bookList .book .switch .switch {
+.book .switch .switch {
   position: relative;
   display: inline-block;
   width: 50px;
@@ -140,19 +130,19 @@ section .bookList .book .switch .switch {
   margin: 10px;
 }
 
-section .bookList .book .bookInfo h2 {
+.book .bookInfo h2 {
   font-size: 1.5rem;
   font-weight: 500;
   color: #fefae0;
 }
 
-section .bookList .book .bookInfo p {
+.book .bookInfo p {
   font-size: 0.75rem;
   font-weight: 500;
   color: #fefae0;
 }
 
-section .bookList .book .book-button {
+.book .book-button {
   justify-self: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,7 +154,7 @@ section .bookList .book .book-button {
   color: #fefae0;
 }
 
-section .bookList .book .book-button button {
+.book .book-button button {
   margin: 0.5rem;
   background: #283618;
   width: 80px;
@@ -179,98 +169,8 @@ section .bookList .book .book-button button {
   transition: all 0.3s ease-in-out;
 }
 
-section .bookList .book .book-button button:hover {
+.book .book-button button:hover {
   background: #dda15e;
   color: #283618;
-}
-
-section .bookList .book .pages {
-  margin: 0.5rem;
-  font-size: 0.7rem;
-  padding-top: 5px;
-}
-
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 15px;
-  margin: 10px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #bc6c25;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 20px;
-}
-
-.slider:before {
-  position: absolute;
-  content: '';
-  height: 10px;
-  width: 10px;
-  left: 4px;
-  bottom: 2px;
-  background-color: #283618;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: #fefae0;
-}
-
-input:focus + .slider {
-  -webkit-box-shadow: 0 0 1px #fefae0;
-          box-shadow: 0 0 1px #fefae0;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(12px);
-          transform: translateX(12px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 30px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-.swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
