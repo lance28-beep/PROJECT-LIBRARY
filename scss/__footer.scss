@@ -1,0 +1,38 @@
+//
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $quaternary-color;
+  .social-media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .footer__icons {
+      transform: scale(1.5);
+      margin: 5px 1rem;
+      color: $secondary-color;
+      &:hover {
+        color: $primary-color;
+        transform: scale(1.8);
+      }
+    }
+  }
+  .footer__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    p {
+      color: $secondary-color;
+      font-size: $smaller-font-size;
+      a {
+        text-decoration: none;
+        font-weight: $font-medium;
+        color: $primary-color;
+      }
+    }
+  }
+}

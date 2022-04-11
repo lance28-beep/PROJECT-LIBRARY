@@ -1,12 +1,6 @@
+/*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@200;400;700;800&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-// variables
 /*========== Colors ==========*/
 $primary-color: #fefae0;
 $secondary-color: #283618;
@@ -39,16 +33,3 @@ $mb-1: 1rem;
 $mb-1-5: 1.5rem;
 $mb-2: 2rem;
 $mb-2-5: 2.5rem;
-
-body {
-  font-family: $body-font;
-  font-size: $normal-font-size;
-  font-weight: $font-medium;
-  color: $secondary-color;
-  background-color: $primary-color;
-  header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}

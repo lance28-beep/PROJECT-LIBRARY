@@ -1,11 +1,18 @@
-html,
-body {
-  position: relative;
+// html,
+// body {
+//   position: relative;
+//   height: 100%;
+// }
+section {
+  position: static;
   height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-
-body {
-  background: #eee;
+section {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
@@ -15,15 +22,16 @@ body {
 
 .swiper {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
   width: 300px;
-  height: 300px;
+  height: 400px;
+  border: 1px solid black;
 }
 
 .swiper-slide img {

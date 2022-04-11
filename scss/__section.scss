@@ -1,0 +1,17 @@
+section {
+  background-color: $primary-color;
+
+  button {
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    font-family: $body-font;
+    border: none;
+    font-size: $normal-font-size;
+    letter-spacing: 2px;
+    font-weight: $font-medium;
+    background-color: $secondary-color;
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+}
