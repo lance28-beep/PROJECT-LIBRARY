@@ -35,3 +35,16 @@ window.addEventListener('click', (e) => {
     modal.classList.remove('modal-open')
   }
 })
+
+///remove swiper-slider list
+let swiperslide = document.querySelectorAll('.swiper-slide')
+let removeBtn = document.querySelectorAll('.remove-btn')
+
+removeBtn.forEach((btn, key) => {
+  btn.addEventListener('click', () => {
+    // console.log(key)
+    // console.log(swiperslide.key)
+    // console.log(swiperslide[key])
+    swiperslide[key].remove()
+  })
+})
