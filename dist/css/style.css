@@ -1,41 +1,31 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@200;400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
 /*========== Colors ==========*/
 /*========== Font and typography ==========*/
 /*========== Font weight ==========*/
 /*========== Margenes Bottom ==========*/
+/*==========swiper ==========*/
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
 }
 
-html {
-  scroll-behavior: smooth;
+:root {
+  --swiper-theme-color: #283618;
 }
 
 body {
   font-family: "Noto Serif Display", serif;
-  font-size: 0.938rem;
-  background: #fefae0;
-  color: #283618;
+  background-color: #fefae0;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  color: #606c38;
-  font-weight: 600;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-header {
+section {
+  position: static;
+  height: 100%;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,42 +33,184 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  height: 100%;
+  padding: auto 0;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  min-height: 400px;
+  height: 80%;
+  border: 1px solid black;
+}
+
+.swiper-slide .book {
+  display: block;
+  width: 100%;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 70px 1fr 80px;
+      grid-template-rows: 70px 1fr 80px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 header h1 {
-  margin-top: 0.75rem;
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 900;
   margin-bottom: 0.5rem;
 }
 
-header button {
-  background: #283618;
-  width: 100px;
-  height: 30px;
-  color: #fefae0;
-  font-size: 1rem;
-  font-weight: 100;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+.modal {
+  position: fixed;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s linear 0.25s, opacity 0.25s linear;
+  transition: visibility 0s linear 0.25s, opacity 0.25s linear;
 }
 
-header button:hover {
-  background: #dda15e;
-  color: #283618;
+.modal .modal-content {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  background-color: #283618;
+  color: #fefae0;
+}
+
+.modal .modal-content .close {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+}
+
+.modal .modal-content .modal-header {
+  margin: 2.5rem;
+  text-align: center;
+}
+
+.modal .modal-content .modal-body {
+  margin: 0 auto;
+}
+
+.modal .modal-content .modal-body form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal-content .modal-body form input {
+  margin: 0.5rem;
+  width: 80%;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.modal .modal-content .modal-body form button {
+  margin: 2rem;
+  width: 80%;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #283618;
+  color: #fefae0;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.modal-open {
+  visibility: visible;
+  opacity: 1;
 }
 
 section {
-  margin-top: 1.5rem;
+  background-color: #fefae0;
 }
 
-section .bookList {
+section button {
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  font-family: "Noto Serif Display", serif;
+  border: none;
+  font-size: 0.938rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  background-color: #283618;
+  color: #fefae0;
+  margin-bottom: 1rem;
+}
+
+.book {
+  height: 100%;
+  width: 100%;
+  background-color: #606c38;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,14 +224,36 @@ section .bookList {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 90%;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: "Noto Serif Display", serif;
 }
 
-section .bookList .book {
-  height: 290px;
-  width: 200px;
-  background-color: #606c38;
+.book .switch {
+  position: absolute;
+  width: 130px;
+  height: 30px;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 9999;
+}
+
+.book .switch p {
+  margin-top: 5px;
+  font-size: 0.75rem;
+}
+
+.book .bookInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,49 +264,29 @@ section .bookList .book {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-section .bookList .book .switch {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-section .bookList .book .switch p {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
   position: relative;
-  left: -80px;
-  width: 100px;
-  height: 15px;
-  font-size: 0.5rem;
-  font-weight: 500;
-  color: #fefae0;
-  text-align: center;
-  margin-top: 3px;
 }
 
-section .bookList .book .switch .switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 25px;
-  margin: 10px;
-}
-
-section .bookList .book .bookInfo h2 {
+.book .bookInfo h2 {
   font-size: 1.5rem;
   font-weight: 500;
   color: #fefae0;
+  margin-bottom: 1rem;
 }
 
-section .bookList .book .bookInfo p {
+.book .bookInfo p {
   font-size: 0.75rem;
   font-weight: 500;
   color: #fefae0;
 }
 
-section .bookList .book .book-button {
+.book .book-button {
+  position: absolute;
+  bottom: 0;
   justify-self: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,39 +298,44 @@ section .bookList .book .book-button {
   color: #fefae0;
 }
 
-section .bookList .book .book-button button {
+.book .book-button button {
   margin: 0.5rem;
   background: #283618;
-  width: 80px;
-  height: 20px;
+  width: 100px;
+  height: 30px;
   color: #fefae0;
   font-size: 12px;
   font-weight: 100;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-section .bookList .book .book-button button:hover {
-  background: #dda15e;
+.book .book-button button:hover {
+  background: #fefae0;
   color: #283618;
+  font-size: 900;
 }
 
-section .bookList .book .pages {
-  margin: 0.5rem;
-  font-size: 0.7rem;
-  padding-top: 5px;
+.book .pages {
+  height: 100%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 0.75rem;
+  margin: 1rem;
 }
 
-/* The switch - the box around the slider */
-.switch {
+.swiper-slide {
+  margin: 0;
+  padding: 0;
   position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 15px;
-  margin: 10px;
+  background-color: #606c38;
+  color: #fefae0;
 }
 
 /* Hide default HTML checkbox */
@@ -211,22 +350,23 @@ section .bookList .book .pages {
   position: absolute;
   cursor: pointer;
   top: 0;
-  left: 0;
   right: 0;
-  bottom: 0;
   background-color: #bc6c25;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 20px;
+  height: 20px;
+  width: 40px;
+  margin: 0.5rem;
 }
 
 .slider:before {
   position: absolute;
   content: '';
-  height: 10px;
-  width: 10px;
-  left: 4px;
-  bottom: 2px;
+  height: 18px;
+  width: 18px;
+  left: 1px;
+  bottom: 1px;
   background-color: #283618;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -243,34 +383,86 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(12px);
-          transform: translateX(12px);
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
 }
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 30px;
+  border-radius: 10px;
 }
 
 .slider.round:before {
   border-radius: 50%;
 }
 
-.swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #bc6c25;
 }
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
+footer .social-media-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
+footer .social-media-icons .footer__icons {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  margin: 5px 1rem;
+  color: #283618;
+}
+
+footer .social-media-icons .footer__icons:hover {
+  color: #fefae0;
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+}
+
+footer .footer__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
+}
+
+footer .footer__description p {
+  color: #283618;
+  font-size: 0.75rem;
+}
+
+footer .footer__description p a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fefae0;
 }
 /*# sourceMappingURL=style.css.map */

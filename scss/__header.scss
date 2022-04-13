@@ -1,29 +1,10 @@
 header {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-
   h1 {
-    margin-top: $mb-0-75;
-    font-size: 2rem;
-    font-weight: $font-semi-bold;
+    font-size: $h1-font-size;
+    font-weight: $font-black;
     margin-bottom: $mb-0-5;
-  }
-
-  button {
-    background: $secondary-color;
-    width: 100px;
-    height: 30px;
-    color: $primary-color;
-    font-size: 1rem;
-    font-weight: 100;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    &:hover {
-      background: $quinary-color;
-      color: $secondary-color;
-    }
   }
 }

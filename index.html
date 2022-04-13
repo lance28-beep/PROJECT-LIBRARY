@@ -9,182 +9,216 @@
  <link rel="icon" type="image/png" sizes="32x32" href="/dist/img/favicon-32x32.png">
  <link rel="icon" type="image/png" sizes="16x16" href="/dist/img/favicon-16x16.png">
  <link rel="manifest" href="/dist/img/site.webmanifest">
+ <!--==================== UNICONS ====================-->
+ <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+ <!-- Link Swiper's CSS -->
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
  <link rel="stylesheet" href="dist/css/style.css">
- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-
  <title>Book Collections</title>
 </head>
 
 <body>
  <header>
   <h1>Book Collections</h1>
-
  </header>
+ <div class="modal">
+  <div class="modal-content">
+   <i class="uil uil-times close close-btn"></i>
+   <div class="modal-header">
+    <h2>Add a Book</h2>
+   </div>
+   <div class="modal-body">
+    <form action="add.php" method="post">
+     <label for="title">Title</label>
+     <input type="text" name="title" id="title" placeholder="Rich Dad Poor Dad" required>
+     <label for="author">Author</label>
+     <input type="text" name="author" id="author" placeholder="Robert Kiyosaki" required>
+     <label for="pages">Pages</label>
+     <input type="number" name="pages" id="pages" placeholder="500" min="10" max="5000" required>
+     <button>Submit</button>
+    </form>
+   </div>
+  </div>
+ </div>
  <section>
   <!-- Swiper -->
   <div class="swiper mySwiper">
    <div class="swiper-wrapper">
     <div class="swiper-slide">
-     <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+     <div class="book">
+      <label class="switch">
+       <p>mark as read</p>
+       <input type="checkbox">
+       <span class="slider"></span>
+      </label>
+      <div class="bookInfo">
+       <h2>The Hobbit</h2>
+       <p>by J.R.R. Tolkien</p>
+      </div>
+      <div class="book-button">
+       <button class="remove-btn">Removed</button>
+       <p class="pages">100 pages</p>
+      </div>
+     </div>
     </div>
     <div class="swiper-slide">
-     <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+     <div class="book">
+      <label class="switch">
+       <p>mark as read</p>
+       <input type="checkbox">
+       <span class="slider"></span>
+      </label>
+      <div class="bookInfo">
+       <h2>The Hobbit</h2>
+       <p>by J.R.R. Tolkien</p>
+      </div>
+      <div class="book-button">
+       <button class="remove-btn">Removed</button>
+       <p class="pages">100 pages</p>
+      </div>
+     </div>
     </div>
     <div class="swiper-slide">
-     <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+     <div class="book">
+      <label class="switch">
+       <p>mark as read</p>
+       <input type="checkbox">
+       <span class="slider"></span>
+      </label>
+      <div class="bookInfo">
+       <h2>The Hobbit</h2>
+       <p>by J.R.R. Tolkien</p>
+      </div>
+      <div class="book-button">
+       <button class="remove-btn">Removed</button>
+       <p class="pages">100 pages</p>
+      </div>
+     </div>
     </div>
     <div class="swiper-slide">
-     <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+     <div class="book">
+      <label class="switch">
+       <p>mark as read</p>
+       <input type="checkbox">
+       <span class="slider"></span>
+      </label>
+      <div class="bookInfo">
+       <h2>The Hobbit</h2>
+       <p>by J.R.R. Tolkien</p>
+      </div>
+      <div class="book-button">
+       <button class="remove-btn">Removed</button>
+       <p class="pages">100 pages</p>
+      </div>
+     </div>
     </div>
     <div class="swiper-slide">
-     <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+     <div class="book">
+      <label class="switch">
+       <p>mark as read</p>
+       <input type="checkbox">
+       <span class="slider"></span>
+      </label>
+      <div class="bookInfo">
+       <h2>The Hobbit</h2>
+       <p>by J.R.R. Tolkien</p>
+      </div>
+      <div class="book-button">
+       <button class="remove-btn">Removed</button>
+       <p class="pages">100 pages</p>
+      </div>
+     </div>
     </div>
     <div class="swiper-slide">
-     <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+     <div class="book">
+      <label class="switch">
+       <p>mark as read</p>
+       <input type="checkbox">
+       <span class="slider"></span>
+      </label>
+      <div class="bookInfo">
+       <h2>The Hobbit</h2>
+       <p>by J.R.R. Tolkien</p>
+      </div>
+      <div class="book-button">
+       <button class="remove-btn">Removed</button>
+       <p class="pages">100 pages</p>
+      </div>
+     </div>
     </div>
     <div class="swiper-slide">
-     <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+     <div class="book">
+      <label class="switch">
+       <p>mark as read</p>
+       <input type="checkbox">
+       <span class="slider"></span>
+      </label>
+      <div class="bookInfo">
+       <h2>The Hobbit</h2>
+       <p>by J.R.R. Tolkien</p>
+      </div>
+      <div class="book-button">
+       <button class="remove-btn">Removed</button>
+       <p class="pages">100 pages</p>
+      </div>
+     </div>
     </div>
     <div class="swiper-slide">
-     <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+     <div class="book">
+      <label class="switch">
+       <p>mark as read</p>
+       <input type="checkbox">
+       <span class="slider"></span>
+      </label>
+      <div class="bookInfo">
+       <h2>The Hobbit</h2>
+       <p>by J.R.R. Tolkien</p>
+      </div>
+      <div class="book-button">
+       <button class="remove-btn">Removed</button>
+       <p class="pages">100 pages</p>
+      </div>
+     </div>
     </div>
     <div class="swiper-slide">
-     <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+     <div class="book">
+      <label class="switch">
+       <p>mark as read</p>
+       <input type="checkbox">
+       <span class="slider"></span>
+      </label>
+      <div class="bookInfo">
+       <h2>The Hobbit</h2>
+       <p>by J.R.R. Tolkien</p>
+      </div>
+      <div class="book-button">
+       <button class="remove-btn">Removed</button>
+       <p class="pages">100 pages</p>
+      </div>
+     </div>
     </div>
+
    </div>
    <div class="swiper-pagination"></div>
   </div>
-  <!-- <div class="bookList">
-   <div class="book">
-    <label class="switch">
-     <p>mark as read</p>
-     <input type="checkbox">
-     <span class="slider"></span>
-    </label>
-    <div class="bookInfo">
-     <h2>The Hobbit</h2>
-     <p>by J.R.R. Tolkien</p>
-    </div>
-    <div class="book-button">
-     <button>Removed</button>
-     <p class="pages">100 pages</p>
-    </div>
-   </div>
-   <div class="book">
-    <label class="switch">
-     <p>mark as read</p>
-     <input type="checkbox">
-     <span class="slider"></span>
-    </label>
-    <div class="bookInfo">
-     <h2>The Hobbit</h2>
-     <p>by J.R.R. Tolkien</p>
-    </div>
-    <div class="book-button">
-     <button>Removed</button>
-     <p class="pages">100 pages</p>
-    </div>
-   </div>
-   <div class="book">
-    <label class="switch">
-     <p>mark as read</p>
-     <input type="checkbox">
-     <span class="slider"></span>
-    </label>
-    <div class="bookInfo">
-     <h2>The Hobbit</h2>
-     <p>by J.R.R. Tolkien</p>
-    </div>
-    <div class="book-button">
-     <button>Removed</button>
-     <p class="pages">100 pages</p>
-    </div>
-   </div>
-   <div class="book">
-    <label class="switch">
-     <p>mark as read</p>
-     <input type="checkbox">
-     <span class="slider"></span>
-    </label>
-    <div class="bookInfo">
-     <h2>The Hobbit</h2>
-     <p>by J.R.R. Tolkien</p>
-    </div>
-    <div class="book-button">
-     <button>Removed</button>
-     <p class="pages">100 pages</p>
-    </div>
-   </div>
-   <div class="book">
-    <label class="switch">
-     <p>mark as read</p>
-     <input type="checkbox">
-     <span class="slider"></span>
-    </label>
-    <div class="bookInfo">
-     <h2>The Hobbit</h2>
-     <p>by J.R.R. Tolkien</p>
-    </div>
-    <div class="book-button">
-     <button>Removed</button>
-     <p class="pages">100 pages</p>
-    </div>
-   </div>
-   <div class="book">
-    <label class="switch">
-     <p>mark as read</p>
-     <input type="checkbox">
-     <span class="slider"></span>
-    </label>
-    <div class="bookInfo">
-     <h2>The Hobbit</h2>
-     <p>by J.R.R. Tolkien</p>
-    </div>
-    <div class="book-button">
-     <button>Removed</button>
-     <p class="pages">100 pages</p>
-    </div>
-   </div>
-   <div class="book">
-    <label class="switch">
-     <p>mark as read</p>
-     <input type="checkbox">
-     <span class="slider"></span>
-    </label>
-    <div class="bookInfo">
-     <h2>The Hobbit</h2>
-     <p>by J.R.R. Tolkien</p>
-    </div>
-    <div class="book-button">
-     <button>Removed</button>
-     <p class="pages">100 pages</p>
-    </div>
-   </div>
-   <div class="book">
-    <label class="switch">
-     <p>mark as read</p>
-     <input type="checkbox">
-     <span class="slider"></span>
-    </label>
-    <div class="bookInfo">
-     <h2>The Hobbit</h2>
-     <p>by J.R.R. Tolkien</p>
-    </div> -->
-  <!-- <div class="book-button">
-   <button>Removed</button>
-   <p class="pages">100 pages</p>
-  </div>
-  </div> -->
+  <button id="modalBtn">+ Add Book</button>
  </section>
  <footer>
-  <div class="social-icons">
-
+  <div class="social-media-icons">
+   <i class="uil uil-github footer__icons"></i>
+   <i class="uil uil-linkedin footer__icons"></i>
+   <i class="uil uil-twitter footer__icons"></i>
+   <i class="uil uil-facebook footer__icons"></i>
   </div>
-  <p>&copy; 2020 Book Collections</p>
+  <div class="footer__description">
+   <p>Created by <a href="http://">Lance Valle</a> for <a href="http://">The Odin Project</a> </p>
+   <p>Copyright © 2020 Lance Valle. All rights reserved.</p>
+  </div>
+
  </footer>
+ <!-- Swiper JS -->
  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
  <script src="dist/script/script.js"></script>
-
 </body>
 
 </html>
