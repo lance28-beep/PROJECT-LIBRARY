@@ -24,17 +24,20 @@ section {
   width: 100%;
   padding-top: 10px;
   padding-bottom: 30px;
+  height: 100%;
+  padding: auto 0;
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
   width: 300px;
-  height: 400px;
+  min-height: 400px;
+  height: $height-swiper;
   border: 1px solid black;
 }
 
-.swiper-slide img {
+.swiper-slide .book {
   display: block;
   width: 100%;
 }
