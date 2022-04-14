@@ -46,5 +46,30 @@ removeBtn.forEach((btn, key) => {
     // console.log(swiperslide.key)
     // console.log(swiperslide[key])
     swiperslide[key].remove()
+    swiper.update()
   })
 })
+
+
+//random background color
+let randomColor = () => {
+  let r = Math.floor(Math.random() * 256)
+  let g = Math.floor(Math.random() * 256)
+  let b = Math.floor(Math.random() * 256)
+  return `rgb(${r}, ${g}, ${b})`
+}
+
+swiperslide.forEach((slide) => {
+  slide.style.backgroundColor = randomColor()
+})
+
+
+let myLibrary = []
+
+function Book() {
+  // the constructor...
+}
+
+function addBookToLibrary() {
+  // do stuff here
+}
