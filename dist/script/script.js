@@ -50,7 +50,6 @@ removeBtn.forEach((btn, key) => {
   })
 })
 
-
 //random background color
 let randomColor = () => {
   let r = Math.floor(Math.random() * 256)
@@ -63,13 +62,103 @@ swiperslide.forEach((slide) => {
   slide.style.backgroundColor = randomColor()
 })
 
-
 let myLibrary = []
-
-function Book() {
-  // the constructor...
-}
 
 function addBookToLibrary() {
   // do stuff here
 }
+
+//input toggle change label
+let input = document.querySelectorAll('input[type="checkbox"]')
+let label = document.querySelectorAll('.switch-label')
+
+function booksLabel() {
+  input.forEach((input, key) => {
+    input.addEventListener('change', () => {
+      if (input.checked) {
+        label[key].innerHTML = `mark as read`
+      } else {
+        label[key].innerHTML = `mark as unread`
+      }
+    })
+  })
+}
+
+///add book to library
+//constructor
+
+function Book(title, author, pages, read) {
+  this.title = title
+  this.author = author
+  this.pages = pages
+  this.read = read
+}
+
+function addBookToLibrary() {
+  let title = document.querySelector('#title').value
+  let author = document.querySelector('#author').value
+  let pages = document.querySelector('#pages').value
+  let read = document.querySelector('#read').checked
+  let book = new Book(title, author, pages, read)
+  myLibrary.push(book)
+  console.log(book)
+  console.log(myLibrary)
+}
+
+//save to localStorage
+function saveToLocalStorage() {
+  localStorage.setItem('myLibrary', JSON.stringify(myLibrary))
+}
+
+//get from localStorage
+const BooksCollection = JSON.parse(localStorage.getItem('myLibrary'))
+
+console.log(BooksCollection)
+
+//create book elements
+function createBookElements(book) {
+  let bookDiv = document.createElement('div')
+  bookDiv.classList.add('swiper-slide')
+  bookDiv.innerHTML = `
+  <div class="book">
+      <label class="switch">
+       <p class="switch-label">${
+         book.read ? 'mark as read' : 'mark as unread'
+       }</p>
+       <input type="checkbox" ${book.read ? 'checked' : ''} >
+       <span class="slider"></span>
+      </label>
+      <div class="bookInfo">
+       <h2>${book.title}</h2>
+       <p>${book.author}</p>
+      </div>
+      <div class="book-button">
+       <button class="remove-btn">Removed</button>
+       <p class="pages">${book.pages} pages</p>
+      </div>
+     </div>`
+  return bookDiv
+}
+
+//create Book each object
+function createBook() {
+  BooksCollection.forEach((book) => {
+    const mainContainer = document.querySelector('.swiper-wrapper')
+    mainContainer.appendChild(createBookElements(book))
+    console.log('success')
+  })
+}
+
+//add books
+let addBtn = document.querySelector('#addNewBook')
+addBtn.addEventListener('click', () => {
+  addBookToLibrary()
+  saveToLocalStorage()
+  // location.reload()
+  //reset form
+  document.querySelector('#addBooktoLibrary').reset()
+  //close modal
+  modal.classList.remove('modal-open')
+  createBook()
+  booksLabel()
+})
