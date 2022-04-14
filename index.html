@@ -28,14 +28,16 @@
     <h2>Add a Book</h2>
    </div>
    <div class="modal-body">
-    <form action="add.php" method="post">
+    <form id="addBooktoLibrary">
      <label for="title">Title</label>
      <input type="text" name="title" id="title" placeholder="Rich Dad Poor Dad" required>
      <label for="author">Author</label>
      <input type="text" name="author" id="author" placeholder="Robert Kiyosaki" required>
      <label for="pages">Pages</label>
      <input type="number" name="pages" id="pages" placeholder="500" min="10" max="5000" required>
-     <button>Submit</button>
+     <label for="read">Read</label>
+     <input type="checkbox" name="read" id="read" value="true">
+     <button id="addNewBook">Submit</button>
     </form>
    </div>
   </div>
@@ -44,160 +46,6 @@
   <!-- Swiper -->
   <div class="swiper mySwiper">
    <div class="swiper-wrapper">
-    <div class="swiper-slide">
-     <div class="book">
-      <label class="switch">
-       <p>mark as read</p>
-       <input type="checkbox">
-       <span class="slider"></span>
-      </label>
-      <div class="bookInfo">
-       <h2>The Hobbit</h2>
-       <p>by J.R.R. Tolkien</p>
-      </div>
-      <div class="book-button">
-       <button class="remove-btn">Removed</button>
-       <p class="pages">100 pages</p>
-      </div>
-     </div>
-    </div>
-    <div class="swiper-slide">
-     <div class="book">
-      <label class="switch">
-       <p>mark as read</p>
-       <input type="checkbox">
-       <span class="slider"></span>
-      </label>
-      <div class="bookInfo">
-       <h2>The Hobbit</h2>
-       <p>by J.R.R. Tolkien</p>
-      </div>
-      <div class="book-button">
-       <button class="remove-btn">Removed</button>
-       <p class="pages">100 pages</p>
-      </div>
-     </div>
-    </div>
-    <div class="swiper-slide">
-     <div class="book">
-      <label class="switch">
-       <p>mark as read</p>
-       <input type="checkbox">
-       <span class="slider"></span>
-      </label>
-      <div class="bookInfo">
-       <h2>The Hobbit</h2>
-       <p>by J.R.R. Tolkien</p>
-      </div>
-      <div class="book-button">
-       <button class="remove-btn">Removed</button>
-       <p class="pages">100 pages</p>
-      </div>
-     </div>
-    </div>
-    <div class="swiper-slide">
-     <div class="book">
-      <label class="switch">
-       <p>mark as read</p>
-       <input type="checkbox">
-       <span class="slider"></span>
-      </label>
-      <div class="bookInfo">
-       <h2>The Hobbit</h2>
-       <p>by J.R.R. Tolkien</p>
-      </div>
-      <div class="book-button">
-       <button class="remove-btn">Removed</button>
-       <p class="pages">100 pages</p>
-      </div>
-     </div>
-    </div>
-    <div class="swiper-slide">
-     <div class="book">
-      <label class="switch">
-       <p>mark as read</p>
-       <input type="checkbox">
-       <span class="slider"></span>
-      </label>
-      <div class="bookInfo">
-       <h2>The Hobbit</h2>
-       <p>by J.R.R. Tolkien</p>
-      </div>
-      <div class="book-button">
-       <button class="remove-btn">Removed</button>
-       <p class="pages">100 pages</p>
-      </div>
-     </div>
-    </div>
-    <div class="swiper-slide">
-     <div class="book">
-      <label class="switch">
-       <p>mark as read</p>
-       <input type="checkbox">
-       <span class="slider"></span>
-      </label>
-      <div class="bookInfo">
-       <h2>The Hobbit</h2>
-       <p>by J.R.R. Tolkien</p>
-      </div>
-      <div class="book-button">
-       <button class="remove-btn">Removed</button>
-       <p class="pages">100 pages</p>
-      </div>
-     </div>
-    </div>
-    <div class="swiper-slide">
-     <div class="book">
-      <label class="switch">
-       <p>mark as read</p>
-       <input type="checkbox">
-       <span class="slider"></span>
-      </label>
-      <div class="bookInfo">
-       <h2>The Hobbit</h2>
-       <p>by J.R.R. Tolkien</p>
-      </div>
-      <div class="book-button">
-       <button class="remove-btn">Removed</button>
-       <p class="pages">100 pages</p>
-      </div>
-     </div>
-    </div>
-    <div class="swiper-slide">
-     <div class="book">
-      <label class="switch">
-       <p>mark as read</p>
-       <input type="checkbox">
-       <span class="slider"></span>
-      </label>
-      <div class="bookInfo">
-       <h2>The Hobbit</h2>
-       <p>by J.R.R. Tolkien</p>
-      </div>
-      <div class="book-button">
-       <button class="remove-btn">Removed</button>
-       <p class="pages">100 pages</p>
-      </div>
-     </div>
-    </div>
-    <div class="swiper-slide">
-     <div class="book">
-      <label class="switch">
-       <p>mark as read</p>
-       <input type="checkbox">
-       <span class="slider"></span>
-      </label>
-      <div class="bookInfo">
-       <h2>The Hobbit</h2>
-       <p>by J.R.R. Tolkien</p>
-      </div>
-      <div class="book-button">
-       <button class="remove-btn">Removed</button>
-       <p class="pages">100 pages</p>
-      </div>
-     </div>
-    </div>
-
    </div>
    <div class="swiper-pagination"></div>
   </div>

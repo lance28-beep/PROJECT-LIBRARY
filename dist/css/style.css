@@ -210,7 +210,6 @@ section button {
 .book {
   height: 100%;
   width: 100%;
-  background-color: #606c38;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,7 +231,7 @@ section button {
 
 .book .switch {
   position: absolute;
-  width: 130px;
+  width: 140px;
   height: 30px;
   top: 0;
   right: 0;
