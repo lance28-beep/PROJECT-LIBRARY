@@ -15,10 +15,14 @@ var swiper = new Swiper('.mySwiper', {
   },
 })
 
+
+let swiperslide = document.querySelectorAll('.swiper-slide')
+let removeBtn = document.querySelectorAll('.remove-btn')
 ///modal
 const modalBtn = document.querySelector('#modalBtn')
 const closeBtn = document.querySelector('.close-btn')
 const modal = document.querySelector('.modal')
+
 //show modal
 modalBtn.addEventListener('click', () => {
   modal.classList.add('modal-open')
@@ -37,9 +41,6 @@ window.addEventListener('click', (e) => {
 })
 
 ///remove swiper-slider list
-let swiperslide = document.querySelectorAll('.swiper-slide')
-let removeBtn = document.querySelectorAll('.remove-btn')
-
 removeBtn.forEach((btn, key) => {
   btn.addEventListener('click', () => {
     // console.log(key)
@@ -110,9 +111,24 @@ function saveToLocalStorage() {
   localStorage.setItem('myLibrary', JSON.stringify(myLibrary))
 }
 
-//get from localStorage
-const BooksCollection = JSON.parse(localStorage.getItem('myLibrary'))
+//add books
+let addBtn = document.querySelector('#addNewBook')
+addBtn.addEventListener('click', () => {
+  addBookToLibrary()
+  saveToLocalStorage()
+  // location.reload()
+  //reset form
+  document.querySelector('#addBooktoLibrary').reset()
+  //close modal
+  modal.classList.remove('modal-open')
+  booksLabel()
+  createBook()
+  swiper.update()
+})
 
+//get from localStorage
+const mainContainer = document.querySelector('.swiper-wrapper')
+const BooksCollection = JSON.parse(localStorage.getItem('myLibrary'))
 console.log(BooksCollection)
 
 //create book elements
@@ -142,23 +158,8 @@ function createBookElements(book) {
 
 //create Book each object
 function createBook() {
+  //create all elements inside main container
   BooksCollection.forEach((book) => {
-    const mainContainer = document.querySelector('.swiper-wrapper')
     mainContainer.appendChild(createBookElements(book))
-    console.log('success')
   })
 }
-
-//add books
-let addBtn = document.querySelector('#addNewBook')
-addBtn.addEventListener('click', () => {
-  addBookToLibrary()
-  saveToLocalStorage()
-  // location.reload()
-  //reset form
-  document.querySelector('#addBooktoLibrary').reset()
-  //close modal
-  modal.classList.remove('modal-open')
-  createBook()
-  booksLabel()
-})
