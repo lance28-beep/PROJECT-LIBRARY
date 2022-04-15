@@ -1,7 +1,9 @@
 # Library (LocalStorage + swiper.js)
 
 > ## From The Odin Project's [curriculum](https://www.theodinproject.com/courses/javascript/lessons/library)
->
+
+![alt](dist/img/Capture.PNG)
+
 > - [Live demo](https://lance28-beep.github.io/PROJECT-LIBRARY/) :shipit:
 
 ## Assignment
